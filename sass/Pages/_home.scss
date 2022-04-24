@@ -1,0 +1,175 @@
+.sectionFonctionnement{
+    padding: 15px;
+    @include desktop{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    &__titre{
+        @include desktop{
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0px 30px 25px;
+        }
+    }
+
+    &__container{
+        padding: 5px 10px;
+    }
+
+    &__ul{
+        padding: 0;
+        width: 100%;
+        @include desktop{
+            max-width: 1000px;
+            display: flex;
+        }
+    }
+    
+    &__li{
+        @include flexbox(center);
+        list-style: none;
+        background-color: #F4F2F2;  
+        height: 80px;
+        border-radius: 25px;
+        margin-bottom: 20px;
+        font-family: $policeSecondary;
+        font-size: medium;
+        font-weight: bold;
+        /*box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%)*/
+        box-shadow: rgba(135, 135, 135, 0.2) 4px 4px 8px;
+        position: relative;
+        &:hover{
+            background-color: #f8cdfff8;
+        }
+        @include desktop{
+            width: 40%;
+            margin: 0 10px;
+        }
+    }
+
+    &__compteur{
+        position: absolute;
+        border-radius: 26px;
+        height: 26px;
+        width: 26px;
+        top: 27px;
+        left: -13px;
+        background-color: $colorPrimary;
+    }
+
+    &__nombre{
+        position: absolute;
+        top: -12px;
+        left: 8px;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    &__icone{
+        position: absolute;
+        left: 40px;
+        font-size: large;
+        color: grey;
+        &:hover{
+            color: $colorPrimary;
+        }
+    }    
+}
+
+.sectionRestaurant{
+    background-color: #F4F2F2;
+    padding: 15px;
+
+    &__titre{
+        @include desktop{
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0px 30px 45px;
+        }
+    }
+
+    .container{
+        @include desktop{
+            max-width: 1000px;
+            margin: 0 auto;
+            @include flexbox (space-around);
+            flex-wrap: wrap;
+        }
+    }
+
+    .article{
+        background-color: #FFFFFF;
+        overflow: hidden;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        position: relative;
+        @include desktop{
+            width: 45%;
+            /*padding: 0px 20px;*/
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        &__image{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            @include desktop{
+                height: 250px;
+            }
+        }
+
+        &__nouveau{
+            background-color: $colorTertiary;
+            color: #247e67;
+            padding: 8px 12px;
+            border-radius: 3px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-weight: bold;
+        }
+    
+        &__contenu{
+            position: relative;
+            &:hover{
+                .fas.fa-heart {
+                    opacity: 1;
+                    transition: .3s ease-in-out;
+                }
+                .far.fa-heart{
+                    opacity: 0;
+                    transition: .3s ease-in-out;
+                }
+            }
+        }
+    
+        &__titre{
+            font-weight: bold;
+            margin: 10px 0px 0px 10px;
+        }
+    
+        &__description{
+            margin: 5px 0px 15px 10px;
+        }
+        
+        .far.fa-heart{
+            @include heart(10px);
+            opacity: 1;
+        }
+
+        .fas.fa-heart{
+            @include heart(10px);
+            background: $colorGradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            opacity: 0;
+        }
+    }
+} 
+

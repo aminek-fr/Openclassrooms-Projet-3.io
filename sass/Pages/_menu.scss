@@ -1,0 +1,166 @@
+//MENU//
+
+.mainMenu{
+    background-color: #F4F2F2;
+    position: relative;
+    margin-top: -40px;
+    padding: 0px 15px;
+    border-radius: 40px 40px 0px 0px;
+
+    .nomRestaurant{
+        @include flexbox(space-between);
+        padding: 15px 0px 0px 0px;
+        @include desktop{
+            @include flexbox(center)
+        }
+        &:hover{
+            .fas.fa-heart {
+                opacity: 1;
+                transition: .3s ease-in-out;
+            }
+            .far.fa-heart{
+                opacity: 0;
+                transition: .3s ease-in-out;
+            }
+        }
+    
+        &__titre{
+            font-family: $policePrimary;
+            font-size: x-large;
+        }
+
+        .far.fa-heart{
+            @include heart(35px);
+            opacity: 1;
+        }
+
+        .fas.fa-heart{
+            @include heart(35px);
+            background: $colorGradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            opacity: 0;
+        }
+    }
+    
+    hr{
+        width: 60px;
+        height: 5px;
+        background-color: $colorTertiary;
+        margin: 0px 0px 20px 0px;
+        border: none;
+    }
+    
+    .titreMenu{
+        margin: 40px 0px 5px 0px;
+        font-weight: normal;
+        font-size: large;
+    }
+
+    article{
+        @include desktop{
+            @include flexbox(space-between)
+        }
+    }
+
+    .articleMenu{
+        height: 70px;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        background-color: #FFFFFF;
+        overflow: hidden;
+        position: relative;
+        box-shadow: rgba(135, 135, 135, 0.2) 0px 0px 20px;
+        @include transition;
+        @include desktop{
+            width: 35%;
+            margin: 15px;
+        }
+
+        &:hover .articleMenu__description{
+            width: 65%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        &:hover .articleMenu__prix{
+            transform: translateX(-70px);
+            transition: transform .5s ease-in-out;
+        }
+
+        &:hover .articleMenu__check{
+            transform: translateX(0px);
+            transition: transform .5s ease-in-out;
+        }
+        &:hover .fas.fa-check-circle{
+            transform: rotate(360deg);
+            transition: transform .5s ease-in-out ;
+        }
+
+        &__contenu{
+            @include flexbox(space-between);
+            margin-top: -10px;
+            padding: 0px 15px 0px 0px;
+        }
+    
+            &__titre{
+                margin: 0;
+                padding: 10px 10px 5px 10px;
+                font-size: large;
+                font-weight: bold;
+            }
+    
+            &__description{
+                margin: 0;
+                padding: 0px 10px;
+            }
+    
+            &__prix{
+                font-weight: bold;
+                transform: translateX(0px);
+                transition: transform .5s;
+            }
+
+            &__check{
+                position: absolute;
+                background-color: $colorTertiary;
+                top: 0;
+                right: 0;
+                height: 70px;
+                width: 70px;
+                border-radius: 0px 15px 15px 0px;
+                transform: translateX(70px);
+                transition: transform .5s;
+            }
+
+            .fas.fa-check-circle{
+                position:absolute;
+                left: 23px;
+                top: 23px;
+                font-size: 1.5rem;
+                color:white;
+                opacity: 1;
+            }
+    }
+    
+    .boutonRechercher{
+        @include flexbox(center);
+        padding: 30px 0px 50px 0px;
+    
+        &__btn{
+            @include btn;
+            margin: 20px 0px 40px 0px;
+            color: #FFFFFF;
+            background: linear-gradient($colorSecondary, $colorPrimary);
+            box-shadow: rgba(135, 135, 135, 0.2) 0px 0px 20px;
+            &:hover{
+                filter: brightness(120%);
+                box-shadow: rgba(85, 85, 85, 0.2) 0px 0px 20px;
+            }
+        }
+    }
+}
+
+
