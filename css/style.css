@@ -313,7 +313,7 @@ header {
   padding: 15px;
 }
 @media screen and (min-width: 900px) {
-  .sectionRestaurant__titre {
+  .sectionRestaurant__titreH2 {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px 0px 30px 45px;
@@ -370,11 +370,11 @@ header {
 }
 .sectionRestaurant .article__contenu:hover .fas.fa-heart {
   opacity: 1;
-  transition: 0.3s ease-in-out;
+  transition: 1.5s ease-in-out;
 }
 .sectionRestaurant .article__contenu:hover .far.fa-heart {
   opacity: 0;
-  transition: 0.3s ease-in-out;
+  transition: 1.5s ease-in-out;
 }
 .sectionRestaurant .article__titre {
   font-weight: bold;
@@ -424,11 +424,11 @@ header {
 }
 .mainMenu .nomRestaurant:hover .fas.fa-heart {
   opacity: 1;
-  transition: 0.3s ease-in-out;
+  transition: 1.5s ease-in-out;
 }
 .mainMenu .nomRestaurant:hover .far.fa-heart {
   opacity: 0;
-  transition: 0.3s ease-in-out;
+  transition: 1.5s ease-in-out;
 }
 .mainMenu .nomRestaurant__titre {
   font-family: "Shrikhand", cursive;
@@ -546,11 +546,17 @@ header {
     margin: 15px;
   }
 }
-.mainMenu .articleMenu:hover .articleMenu__description {
-  width: 65%;
+.mainMenu .articleMenu:hover .articleMenu__titre {
+  width: 70%;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mainMenu .articleMenu:hover .articleMenu__description {
+  width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .mainMenu .articleMenu:hover .articleMenu__prix {
   transform: translateX(-70px);
@@ -576,10 +582,16 @@ header {
   padding: 10px 10px 5px 10px;
   font-size: large;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .mainMenu .articleMenu__description {
   margin: 0;
   padding: 0px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .mainMenu .articleMenu__prix {
   font-weight: bold;

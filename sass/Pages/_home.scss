@@ -83,7 +83,7 @@
     background-color: #F4F2F2;
     padding: 15px;
 
-    &__titre{
+    &__titreH2{
         @include desktop{
             max-width: 1000px;
             margin: 0 auto;
@@ -140,11 +140,11 @@
             &:hover{
                 .fas.fa-heart {
                     opacity: 1;
-                    transition: .3s ease-in-out;
+                    transition: 1.5s ease-in-out;
                 }
                 .far.fa-heart{
                     opacity: 0;
-                    transition: .3s ease-in-out;
+                    transition: 1.5s ease-in-out;
                 }
             }
         }

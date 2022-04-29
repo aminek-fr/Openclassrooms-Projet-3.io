@@ -16,11 +16,11 @@
         &:hover{
             .fas.fa-heart {
                 opacity: 1;
-                transition: .3s ease-in-out;
+                transition: 1.5s ease-in-out;
             }
             .far.fa-heart{
                 opacity: 0;
-                transition: .3s ease-in-out;
+                transition: 1.5s ease-in-out;
             }
         }
     
@@ -78,11 +78,18 @@
             margin: 15px;
         }
 
-        &:hover .articleMenu__description{
-            width: 65%;
+        &:hover .articleMenu__titre{
+            width: 70%;
             white-space: nowrap;
-            text-overflow: ellipsis;
             overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &:hover .articleMenu__description{
+            width: 60%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         &:hover .articleMenu__prix{
@@ -105,44 +112,50 @@
             padding: 0px 15px 0px 0px;
         }
     
-            &__titre{
-                margin: 0;
-                padding: 10px 10px 5px 10px;
-                font-size: large;
-                font-weight: bold;
-            }
-    
-            &__description{
-                margin: 0;
-                padding: 0px 10px;
-            }
-    
-            &__prix{
-                font-weight: bold;
-                transform: translateX(0px);
-                transition: transform .5s;
-            }
+        &__titre{
+            margin: 0;
+            padding: 10px 10px 5px 10px;
+            font-size: large;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
-            &__check{
-                position: absolute;
-                background-color: $colorTertiary;
-                top: 0;
-                right: 0;
-                height: 70px;
-                width: 70px;
-                border-radius: 0px 15px 15px 0px;
-                transform: translateX(70px);
-                transition: transform .5s;
-            }
+        &__description{
+            margin: 0;
+            padding: 0px 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
-            .fas.fa-check-circle{
-                position:absolute;
-                left: 23px;
-                top: 23px;
-                font-size: 1.5rem;
-                color:white;
-                opacity: 1;
-            }
+        &__prix{
+            font-weight: bold;
+            transform: translateX(0px);
+            transition: transform .5s;
+        }
+
+        &__check{
+            position: absolute;
+            background-color: $colorTertiary;
+            top: 0;
+            right: 0;
+            height: 70px;
+            width: 70px;
+            border-radius: 0px 15px 15px 0px;
+            transform: translateX(70px);
+            transition: transform .5s;
+        }
+
+        .fas.fa-check-circle{
+            position:absolute;
+            left: 23px;
+            top: 23px;
+            font-size: 1.5rem;
+            color:white;
+            opacity: 1;
+        }
     }
     
     .boutonRechercher{
