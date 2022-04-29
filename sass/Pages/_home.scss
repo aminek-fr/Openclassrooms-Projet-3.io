@@ -5,12 +5,16 @@
         margin: 0 auto;
     }
 
-    &__titre{
+    &__titreH2{
         @include desktop{
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px 0px 30px 25px;
         }
+    }
+
+    &__titreH3{
+        font-size: medium;
     }
 
     &__container{
@@ -36,7 +40,6 @@
         font-family: $policeSecondary;
         font-size: medium;
         font-weight: bold;
-        /*box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%)*/
         box-shadow: rgba(135, 135, 135, 0.2) 4px 4px 8px;
         position: relative;
         &:hover{
@@ -67,8 +70,7 @@
     }
 
     &__icone{
-        position: absolute;
-        left: 40px;
+        padding-right: 20px;
         font-size: large;
         color: grey;
         &:hover{
@@ -106,7 +108,6 @@
         position: relative;
         @include desktop{
             width: 45%;
-            /*padding: 0px 20px;*/
         }
 
         a{

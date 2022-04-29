@@ -237,11 +237,14 @@ header {
   }
 }
 @media screen and (min-width: 900px) {
-  .sectionFonctionnement__titre {
+  .sectionFonctionnement__titreH2 {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px 0px 30px 25px;
   }
+}
+.sectionFonctionnement__titreH3 {
+  font-size: medium;
 }
 .sectionFonctionnement__container {
   padding: 5px 10px;
@@ -268,7 +271,6 @@ header {
   font-family: "Roboto", sans-serif;
   font-size: medium;
   font-weight: bold;
-  /*box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%)*/
   box-shadow: rgba(135, 135, 135, 0.2) 4px 4px 8px;
   position: relative;
 }
@@ -298,8 +300,7 @@ header {
   font-weight: bold;
 }
 .sectionFonctionnement__icone {
-  position: absolute;
-  left: 40px;
+  padding-right: 20px;
   font-size: large;
   color: grey;
 }
@@ -338,7 +339,6 @@ header {
 @media screen and (min-width: 900px) {
   .sectionRestaurant .article {
     width: 45%;
-    /*padding: 0px 20px;*/
   }
 }
 .sectionRestaurant .article a {
