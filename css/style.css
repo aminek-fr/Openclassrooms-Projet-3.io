@@ -277,6 +277,9 @@ header {
 .sectionFonctionnement__li:hover {
   background-color: rgba(248, 205, 255, 0.9725490196);
 }
+.sectionFonctionnement__li:hover:hover .sectionFonctionnement__icone {
+  color: #9356DC;
+}
 @media screen and (min-width: 900px) {
   .sectionFonctionnement__li {
     width: 40%;
@@ -303,9 +306,6 @@ header {
   padding-right: 20px;
   font-size: large;
   color: grey;
-}
-.sectionFonctionnement__icone:hover {
-  color: #9356DC;
 }
 
 .sectionRestaurant {

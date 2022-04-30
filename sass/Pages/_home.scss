@@ -44,7 +44,11 @@
         position: relative;
         &:hover{
             background-color: #f8cdfff8;
+            &:hover .sectionFonctionnement__icone{
+                color: $colorPrimary;
+            }
         }
+        
         @include desktop{
             width: 40%;
             margin: 0 10px;
@@ -73,9 +77,6 @@
         padding-right: 20px;
         font-size: large;
         color: grey;
-        &:hover{
-            color: $colorPrimary;
-        }
     }    
 }
 
